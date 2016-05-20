@@ -1,0 +1,50 @@
+﻿.container(ng-controller="signupCtrl as vm")
+    #register-modal.modal.fade(role="dialog")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(data-dismiss="modal") &times;
+                    h4
+                        span.glyphicon.glyphicon-lock
+                        |   Register
+                .modal-body
+                    form(data-toggle="validator" role="form" name="signup")
+                        .form-group(ng-class="{'has-error': signup.username.$invalid && signup.username.$dirty}")
+                            label(for="username")
+                                span.glyphicon.glyphicon-user
+                                |   Username
+                            input#username.form-control(type="text" placeholder="Enter user name" ng-model="vm.user.userName" name="username" required ng-minlength="6")
+                            span.help-block.has-error(ng-if="signup.username.$dirty")
+                                span(ng-show="signup.username.$error.required") User name is required.
+                                span(ng-show="signup.username.$error.minlength") User name must be at least 6 characters.
+                        .form-group(ng-class="{'has-error': signup.email.$invalid && signup.email.$dirty}")
+                            label(for="email")
+                                span.glyphicon.glyphicon-envelope
+                                |   Email
+                            input#email.form-control(type="email" placeholder="Enter email" ng-model="vm.user.email" name="email" required)
+                            span.help-block.has-error(ng-if="signup.email.$dirty")
+                                span(ng-show="signup.email.$error.required") Email address is required.
+                                span(ng-show="signup.email.$error.email") Not a valid email address.
+                        .form-group(ng-class="{'has-error': signup.password.$invalid && signup.password.$dirty}")
+                            label(for="password")
+                                span.glyphicon.glyphicon-eye-open
+                                |   Password
+                            input#password.form-control(type="password" placeholder="Enter password" ng-model="vm.user.password" name="password" required ng-minlength="6")
+                            span.help-block.has-error(ng-if="signup.password.$dirty")
+                                span(ng-show="signup.password.$error.required") Password is required.
+                                span(ng-show="signup.password.$error.minlength") Password must be at least 6 characters.
+                        //.form-group(ng-class="{'has-error': signup.confirmation.$invalid && signup.confirmation.$dirty}")
+                            label(for="confirmation")
+                                span.glyphicon.glyphicon-eye-open
+                                |   Confirmation
+                            input#confirmation.form-control(type="password" placeholder="Re-enter password" ng-model="vm.user.confirmation" name="confirmation" required)
+                            span.help-block.has-error(ng-if="signup.confirmation.$dirty")
+                                span(ng-show="signup.confirmation.$error.required") Confirmation password is required.
+                                span(ng-show="signup.password.$error.compareTo") Password must match.
+                        button.btn.btn-success.btn-block(type="submit" ng-click="vm.register(vm.user)" data-dismiss="modal" ng-disabled="signup.$invalid")
+                                span.glyphicon.glyphicon-off
+                                |   Sing up        
+                .modal-footer
+                    button.btn.btn-danger.pull-left(data-dismiss="modal")
+                        span.glyphicon.glyphicon-remove
+                        |   Cancel

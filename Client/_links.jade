@@ -1,0 +1,11 @@
+﻿mixin link (href)
+   link(href="#{href}" rel="stylesheet" type="text/css")&attributes(attributes)
+
+<!-- build:css css/style.css -->
+
++link("bower_components/bootstrap/dist/css/bootstrap.css")
++link("bower_components/angular-toastr/dist/angular-toastr.css")
+
++link("app/styles/style.css")
+
+<!-- endbuild -->

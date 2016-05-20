@@ -1,0 +1,35 @@
+﻿div.container(ng-controller="mainCtrl as vm")
+    nav.navbar.navbar-default
+        div.collapse.navbar-collapse
+            ul.nav.navbar-nav                      
+                li(ng-class="{active: vm.tabIsActive('/home')}")
+                    a(href="#/home") Home
+                li(ng-class="{active: vm.tabIsActive('/sell')}" ng-if="vm.userIsAuth()")
+                    a(href="#/sell") Sell
+                li(ng-class="{active: vm.tabIsActive('/buy')}" ng-if="vm.userIsAuth()")
+                    a(href="#/buy") Buy 
+                li(ng-class="{active: vm.tabIsActive('/bank')}" ng-if="vm.userIsAuth()")
+                    a(href="#/bank") Bank
+            ul.nav.navbar-nav.navbar-right(ng-if="!vm.userIsAuth()")
+                li
+                    a(data-toggle="modal" data-target="#login-modal")
+                        span.glyphicon.glyphicon-log-in
+                        | Login
+                li(ng-class="{active: vm.tabIsActive('/singup')}")
+                    a(data-toggle="modal", data-target="#register-modal" )
+                        span.glyphicon.glyphicon-user
+                        | Sign Up
+            ul.nav.navbar-nav.navbar-right(ng-if="vm.userIsAuth()")
+                li
+                    a
+                        span
+                        | Welcome, {{vm.getUserName()}} 
+                li(ng-class="{active: vm.tabIsActive('/singup')}")
+                    a(ng-click="vm.logout()")
+                        span.glyphicon.glyphicon-user
+                        | Logout            
+    include ./loginView.jade  
+    include ./signupView.jade  
+    div
+        ng-view
+

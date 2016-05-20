@@ -1,0 +1,13 @@
+.vs/
+bin/
+bower_components/
+node_modules/
+obj/
+*.js
+*.js.map
+*.ts.orig
+*.csproj.user
+*.html
+*.css
+typings/
+*.lock.json

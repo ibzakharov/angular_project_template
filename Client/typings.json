@@ -1,0 +1,11 @@
+{
+  "name": "Client",
+  "version": "false",
+  "dependencies": {},
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160320081937",
+    "angular-route": "registry:dt/angular-route#1.3.0+20160317120654",
+    "angular-toastr": "registry:dt/angular-toastr#1.6.0+20160330162121",
+    "jquery": "registry:dt/jquery#1.10.0+20160316155526"
+  }
+}

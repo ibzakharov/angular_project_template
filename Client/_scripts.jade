@@ -1,0 +1,35 @@
+mixin script (src)
+   script(src="#{src}")&attributes(attributes)
+
+//build:scripts js/scripts.js
+
++script("app/constants/common.js")
++script("app/constants/app.js")
++script("app/constants/boot.js")
+
+//entities
++script("app/entities/base.js")
++script("app/entities/operationResult.js")
++script("app/entities/user.js")
+//end-entities
+
+//configs
++script("app/configs/routeConfig.js")
++script("app/configs/toastrConfig.js")
+//end-configs
+
+//services
++script("app/services/authService.js")
++script("app/services/dataService.js")
++script("app/services/errorService.js")
++script("app/services/logService.js")
++script("app/services/routeService.js")
+//end-services
+
+//controllers
++script("app/controllers/loginController.js")
++script("app/controllers/mainController.js")
++script("app/controllers/signupController.js")
+//end-controllers
+
+//endbuild

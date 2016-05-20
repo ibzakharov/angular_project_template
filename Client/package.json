@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "",
+  "private": true,
+  "scripts": {
+    "init": "bower install & typings install"
+  },
+  "devDependencies": {
+  }
+}

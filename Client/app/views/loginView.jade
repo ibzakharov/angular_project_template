@@ -1,0 +1,38 @@
+﻿.container(ng-controller="loginCtrl as vm")
+    #login-modal.modal.fade(role="dialog")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(data-dismiss="modal") &times;
+                    h4
+                        span.glyphicon.glyphicon-lock
+                        |  Login
+                .modal-body
+                    form(data-toggle="validator" role="form")
+                        .form-group
+                            label(for="username")
+                                span.glyphicon.glyphicon-user
+                                |  Username
+                            input#username.form-control(type="text" placeholder="Enter user name" ng-model="vm.user.userName")
+                        .form-group
+                            label(for="password")
+                                span.glyphicon.glyphicon-eye-open
+                                |  Password
+                            input#password.form-control(type="password" placeholder="Enter password" ng-model="vm.user.password")
+                        //.checkbox
+                            label
+                                input(type="checkbox" value="" checked="" ng-model="vm.user.RememberMe")
+                                | Remember me
+                        button.btn.btn-default.btn-block(type="submit", ng-click="vm.login(vm.user)", data-dismiss="modal")
+                                span.glyphicon.glyphicon-off
+                                | Login            
+                .modal-footer
+                    button.btn.btn-default.pull-left(data-dismiss="modal")
+                        span.glyphicon.glyphicon-remove
+                        |  Cancel
+                    p
+                        | Not a member? 
+                        a(data-toggle='modal', data-target='#register-modal') Sign Up
+                    p
+                        | Forgot 
+                        a(data-dismiss="modal") Password?
