@@ -16,7 +16,7 @@
                         span.glyphicon.glyphicon-log-in
                         | Login
                 li(ng-class="{active: vm.tabIsActive('/singup')}")
-                    a(data-toggle="modal", data-target="#register-modal" )
+                    a(data-toggle="modal", data-target="#signup-modal" )
                         span.glyphicon.glyphicon-user
                         | Sign Up
             ul.nav.navbar-nav.navbar-right(ng-if="vm.userIsAuth()")

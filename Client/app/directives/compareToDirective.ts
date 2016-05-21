@@ -5,11 +5,6 @@
             otherModelValue: "=compareTo"
         },
         link: function (scope, element, attributes, ngModel) {
-            console.log(element);
-            console.log(scope);
-            console.log(attributes);
-            console.log(ngModel);
-
 
             ngModel.$validators.compareTo = function (modelValue) {
                 return modelValue === scope.otherModelValue;

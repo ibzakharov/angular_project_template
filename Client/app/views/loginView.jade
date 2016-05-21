@@ -8,18 +8,24 @@
                         span.glyphicon.glyphicon-lock
                         |  Login
                 .modal-body
-                    form(data-toggle="validator" role="form")
-                        .form-group
+                    form(data-toggle="validator" role="form" name="login")
+                        .form-group(ng-class="{'has-error': login.username.$invalid}")
                             label(for="username")
                                 span.glyphicon.glyphicon-user
                                 |  Username
-                            input#username.form-control(type="text" placeholder="Enter user name" ng-model="vm.user.userName")
-                        .form-group
+                            input#username.form-control(type="text" placeholder="Enter user name" ng-model="vm.user.userName" name="username" required ng-minlength="6")
+                            div.help-block.has-error(ng-if="login.username.$invalid")
+                                div(ng-show="login.username.$error.required") User name is required.
+                                div(ng-show="login.username.$error.minlength") User name must be at least 6 characters.
+                        .form-group(ng-class="{'has-error': login.username.$invalid}")
                             label(for="password")
                                 span.glyphicon.glyphicon-eye-open
                                 |  Password
-                            input#password.form-control(type="password" placeholder="Enter password" ng-model="vm.user.password")
-                        //.checkbox
+                            input#password.form-control(type="password" placeholder="Enter password" ng-model="vm.user.password" name="password" required ng-minlength="6")
+                            div.help-block.has-error(ng-if="login.password.$invalid")
+                                div(ng-show="login.password.$error.required") Password is required.
+                                div(ng-show="login.password.$error.minlength") Password must be at least 6 characters.
+                        .checkbox
                             label
                                 input(type="checkbox" value="" checked="" ng-model="vm.user.RememberMe")
                                 | Remember me

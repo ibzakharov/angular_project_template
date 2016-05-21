@@ -11,3 +11,4 @@ obj/
 *.css
 typings/
 *.lock.json
+*.js.orig

@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <ProjectGuid>{706A04B7-2581-48AA-ADAC-B2F8712D472A}</ProjectGuid>
+    <ProjectGuid>{08920573-71DE-4ED7-980E-C9A9B4A71E02}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <OutputPath>bin</OutputPath>
@@ -22,66 +22,49 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="gulpfile.ts" />
+    <TypeScriptCompile Include="tasks\clean-build-folder.ts" />
+    <TypeScriptCompile Include="tasks\compile-typescript.ts" />
+    <TypeScriptCompile Include="tasks\copy-build.ts" />
+    <TypeScriptCompile Include="tasks\copy-views.ts" />
+    <TypeScriptCompile Include="tasks\copy-fonts.ts" />
+    <TypeScriptCompile Include="tasks\copy-images.ts" />
+    <TypeScriptCompile Include="tasks\copy-localization.ts" />
+    <TypeScriptCompile Include="tasks\delete-packed-views.ts" />
+    <TypeScriptCompile Include="tasks\environment.ts" />
+    <TypeScriptCompile Include="tasks\inject-scripts.ts" />
+    <TypeScriptCompile Include="tasks\jade.ts" />
+    <TypeScriptCompile Include="components\configuration.ts" />
+    <TypeScriptCompile Include="components\FilePath.ts" />
+    <TypeScriptCompile Include="routes.ts" />
+    <TypeScriptCompile Include="tasks\pack-views.ts" />
+    <TypeScriptCompile Include="tasks\purge.ts" />
+    <TypeScriptCompile Include="tasks\sass.ts" />
+    <Content Include="gulpfile.js" />
     <Content Include="web.config" />
+    <TypeScriptCompile Include="tasks\pug-lint.ts" />
+    <TypeScriptCompile Include="tasks\ts-lint.ts" />
+    <TypeScriptCompile Include="tasks\uglify.ts" />
+    <TypeScriptCompile Include="typings\main.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="project.json" />
     <Content Include="typings.json" />
-    <Content Include="app\views\homeView.jade" />
-    <Content Include="app\views\loginView.jade" />
-    <Content Include="app\views\mainView.jade" />
-    <Content Include="app\views\profileView.jade" />
-    <Content Include="index.jade" />
-    <TypeScriptCompile Include="app\configs\toastrConfig.ts" />
-    <TypeScriptCompile Include="app\controllers\signupController.ts" />
-    <TypeScriptCompile Include="app\entities\base.ts" />
-    <TypeScriptCompile Include="app\services\logService.ts" />
-    <Content Include="app\styles\margin.sass" />
-    <TypeScriptCompile Include="app\services\errorService.ts" />
-    <TypeScriptCompile Include="app\directives\compareToDirective.ts" />
-    <None Include="app\styles\style.sass" />
-    <Content Include="app\views\signupView.jade" />
-    <Content Include="typings\globals\angular-route\typings.json" />
-    <Content Include="typings\globals\angular-toastr\typings.json" />
-    <Content Include="typings\globals\angular\typings.json" />
-    <Content Include="typings\globals\jquery\typings.json" />
+    <Content Include="tslint.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
-    <Content Include="_links.jade" />
-    <Content Include="_scripts.jade" />
-    <Content Include="_vendor-scripts.jade" />
-    <TypeScriptCompile Include="app\services\dataService.ts" />
-    <TypeScriptCompile Include="typings\globals\angular-route\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\angular-toastr\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\angular\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\jquery\index.d.ts" />
-    <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="app\constants\common.ts" />
-    <TypeScriptCompile Include="app\constants\boot.ts" />
-    <TypeScriptCompile Include="app\configs\routeConfig.ts" />
-    <TypeScriptCompile Include="app\controllers\loginController.ts" />
-    <TypeScriptCompile Include="app\controllers\mainController.ts" />
-    <TypeScriptCompile Include="app\entities\operationResult.ts" />
-    <TypeScriptCompile Include="app\entities\user.ts" />
-    <TypeScriptCompile Include="app\services\authService.ts" />
-    <TypeScriptCompile Include="app\services\routeService.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="app\constants\app.ts" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>Client</RootNamespace>
+    <RootNamespace>Gulp</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
@@ -89,11 +72,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62570</DevelopmentServerPort>
+          <DevelopmentServerPort>60010</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62570/</IISUrl>
+          <IISUrl>http://localhost:60000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
