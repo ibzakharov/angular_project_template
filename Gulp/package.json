@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "private": true,
-  "name": "Gulp",
+  "name": "gulp",
   "scripts": {
     "init": "npm install & typings install"
   },

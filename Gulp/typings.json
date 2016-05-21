@@ -1,24 +1,18 @@
 {
-  "name": "Gulp",
-  "version": false,
-  "dependencies": {
-    "linq": "registry:npm/linq#3.0.5+20160322032703",
-    "typescript": "github:Microsoft/TypeScript/lib/typescript.d.ts#9ef75534e0fd5f92bef86b520dff768c11a2df4d"
-  },
-  "ambientDependencies": {
-    "chalk": "registry:dt/chalk#0.4.0+20160222065144",
+  "name": "gulp",
+  "dependencies": {},
+  "globalDependencies": {
+    "chalk": "registry:dt/chalk#0.4.0+20160317120654",
     "del": "registry:dt/del#2.2.0+20160317120654",
-    "es6-promise": "registry:dt/es6-promise#0.0.0+20160317120654",
+    "es6-promise": "registry:dt/es6-promise#0.0.0+20160423074304",
     "glob": "registry:dt/glob#5.0.10+20160317120654",
-    "gulp": "registry:dt/gulp#3.8.0+20150825164847",
-    "gulp-util": "registry:dt/gulp-util#0.0.0+20141016163602",
+    "gulp": "registry:dt/gulp#3.8.0+20160316155526",
+    "gulp-util": "registry:dt/gulp-util#0.0.0+20160316155526",
     "minimatch": "registry:dt/minimatch#2.0.8+20160317120654",
-    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#48c1e3c1d6baefa4f1a126f188c27c4fefd36bff",
-    "orchestrator": "registry:dt/orchestrator#0.0.0+20150821143159",
-    "q": "registry:dt/q#0.0.0+20160317120654",
-    "through2": "registry:dt/through2#2.0.0+20160127111735",
-    "vinyl": "registry:dt/vinyl#1.1.0+20160214195658",
-    "xmldom": "registry:dt/xmldom#0.1.22+20160319053438",
-    "xpath": "registry:dt/xpath#0.0.7+20160316155526"
+    "node": "registry:dt/node#6.0.0+20160514165920",
+    "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
+    "q": "registry:dt/q#0.0.0+20160417152954",
+    "through2": "registry:dt/through2#2.0.0+20160317120654",
+    "vinyl": "registry:dt/vinyl#1.1.0+20160316155526"
   }
 }

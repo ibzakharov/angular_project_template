@@ -9,6 +9,5 @@ obj/
 *.csproj.user
 *.html
 *.css
-typings/
 *.lock.json
 *.js.orig

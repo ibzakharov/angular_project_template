@@ -1,3 +1,5 @@
+///<reference path="typings/index.d.ts"/>
+
 const gulp = require('gulp');
 
 import sass from './tasks/sass';
