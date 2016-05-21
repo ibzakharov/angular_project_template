@@ -1,1 +1,0 @@
-typings install dt~%1 --global --save
