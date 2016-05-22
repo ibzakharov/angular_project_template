@@ -1,5 +1,5 @@
 ﻿class LoginController {
-    public static inject: string[] = [
+    private static inject: string[] = [
         $app.services.data,
         $app.services.log
     ];
