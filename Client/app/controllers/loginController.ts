@@ -1,15 +1,15 @@
 ﻿class LoginController {
-    private static inject: string[] = [
+    public static inject: string[] = [
         $app.services.data,
         $app.services.log
     ];
+
+    public user: User;
 
     constructor(
         private membership: DataService,
         private log: LogService) {
     }
-
-    public user: User;
 
     public login(user: User): void {
 
