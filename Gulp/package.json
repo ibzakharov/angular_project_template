@@ -3,7 +3,7 @@
   "private": true,
   "name": "gulp",
   "scripts": {
-    "init": "npm install & typings install"
+    "postinstall": "typings install"
   },
   "devDependencies": {
     "del": "^2.2.0",

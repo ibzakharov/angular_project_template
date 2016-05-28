@@ -23,7 +23,7 @@
             })
             .error((error) => {
                 if (!error) {
-                    this.log.error($common.errors.webServiceNotAvailable);
+                    this.log.error($common.errors.webServiceNotAvailable, error);
                 }
             });
     };

@@ -3,37 +3,27 @@ mixin script (src)
 
 //build:scripts js/scripts.js
 
-+script("app/constants/common.js")
-+script("app/constants/app.js")
-+script("app/constants/boot.js")
++script("app/js/constants/common.js")
++script("app/js/constants/app.js")
++script("app/js/modules.js")
 
-//entities
-+script("app/entities/base.js")
-+script("app/entities/operationResult.js")
-+script("app/entities/user.js")
-//end-entities
-
-//configs
-+script("app/configs/routeConfig.js")
-+script("app/configs/toastrConfig.js")
-//end-configs
-
-//services
-+script("app/services/authService.js")
-+script("app/services/dataService.js")
-+script("app/services/errorService.js")
-+script("app/services/logService.js")
-+script("app/services/routeService.js")
-//end-services
-
-//controllers
-+script("app/controllers/loginController.js")
-+script("app/controllers/mainController.js")
-+script("app/controllers/signupController.js")
-//end-controllers
-
-//directives
-+script("app/directives/compareToDirective.js")
-//end-directives
+//js
++script("app/js/modules.js")
++script("app/js/constants/app.js")
++script("app/js/constants/common.js")
++script("app/js/controllers/loginController.js")
++script("app/js/controllers/mainController.js")
++script("app/js/controllers/signupController.js")
++script("app/js/configs/routeConfig.js")
++script("app/js/configs/toastrConfig.js")
++script("app/js/directives/compareToDirective.js")
++script("app/js/entities/base.js")
++script("app/js/entities/operationResult.js")
++script("app/js/entities/user.js")
++script("app/js/services/authService.js")
++script("app/js/services/dataService.js")
++script("app/js/services/logService.js")
++script("app/js/services/routeService.js")
+//end-js
 
 //endbuild

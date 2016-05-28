@@ -30,19 +30,18 @@
     <Content Include="project.json" />
     <Content Include="typings.json" />
     <Content Include="app\views\homeView.jade" />
-    <Content Include="app\views\loginView.jade" />
+    <Content Include="app\views\login.jade" />
     <Content Include="app\views\mainView.jade" />
     <Content Include="app\views\profileView.jade" />
     <Content Include="index.jade" />
-    <TypeScriptCompile Include="app\configs\toastrConfig.ts" />
-    <TypeScriptCompile Include="app\controllers\signupController.ts" />
-    <TypeScriptCompile Include="app\entities\base.ts" />
-    <TypeScriptCompile Include="app\services\logService.ts" />
+    <TypeScriptCompile Include="app\js\configurations\toastrConfig.ts" />
+    <TypeScriptCompile Include="app\js\controllers\signupController.ts" />
+    <TypeScriptCompile Include="app\js\entities\base.ts" />
+    <TypeScriptCompile Include="app\js\services\logService.ts" />
     <Content Include="app\styles\margin.sass" />
-    <TypeScriptCompile Include="app\services\errorService.ts" />
-    <TypeScriptCompile Include="app\directives\compareToDirective.ts" />
+    <TypeScriptCompile Include="app\js\directives\compareToDirective.ts" />
     <None Include="app\styles\style.sass" />
-    <Content Include="app\views\signupView.jade" />
+    <Content Include="app\views\signup.jade" />
     <Content Include="typings\globals\angular-route\typings.json" />
     <Content Include="typings\globals\angular-toastr\typings.json" />
     <Content Include="typings\globals\angular\typings.json" />
@@ -56,7 +55,7 @@
     <Content Include="_links.jade" />
     <Content Include="_scripts.jade" />
     <Content Include="_vendor-scripts.jade" />
-    <TypeScriptCompile Include="app\services\dataService.ts" />
+    <TypeScriptCompile Include="app\js\services\dataService.ts" />
     <TypeScriptCompile Include="typings\globals\angular-route\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\angular-toastr\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\angular\index.d.ts" />
@@ -64,18 +63,18 @@
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\constants\common.ts" />
-    <TypeScriptCompile Include="app\constants\boot.ts" />
-    <TypeScriptCompile Include="app\configs\routeConfig.ts" />
-    <TypeScriptCompile Include="app\controllers\loginController.ts" />
-    <TypeScriptCompile Include="app\controllers\mainController.ts" />
-    <TypeScriptCompile Include="app\entities\operationResult.ts" />
-    <TypeScriptCompile Include="app\entities\user.ts" />
-    <TypeScriptCompile Include="app\services\authService.ts" />
-    <TypeScriptCompile Include="app\services\routeService.ts" />
+    <TypeScriptCompile Include="app\js\constants\common.ts" />
+    <TypeScriptCompile Include="app\js\modules.ts" />
+    <TypeScriptCompile Include="app\js\configurations\routeConfig.ts" />
+    <TypeScriptCompile Include="app\js\controllers\loginController.ts" />
+    <TypeScriptCompile Include="app\js\controllers\mainController.ts" />
+    <TypeScriptCompile Include="app\js\entities\operationResult.ts" />
+    <TypeScriptCompile Include="app\js\entities\user.ts" />
+    <TypeScriptCompile Include="app\js\services\authService.ts" />
+    <TypeScriptCompile Include="app\js\services\routeService.ts" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\constants\app.ts" />
+    <TypeScriptCompile Include="app\js\constants\app.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

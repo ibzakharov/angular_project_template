@@ -17,7 +17,7 @@
                             div.help-block.has-error(ng-if="login.username.$invalid")
                                 div(ng-show="login.username.$error.required") User name is required.
                                 div(ng-show="login.username.$error.minlength") User name must be at least 6 characters.
-                        .form-group(ng-class="{'has-error': login.username.$invalid}")
+                        .form-group(ng-class="{'has-error': login.password.$invalid}")
                             label(for="password")
                                 span.glyphicon.glyphicon-eye-open
                                 |  Password

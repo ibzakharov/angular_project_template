@@ -1,0 +1,1 @@
+call typings install dt~%2% --global --save

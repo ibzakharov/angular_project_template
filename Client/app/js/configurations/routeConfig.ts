@@ -21,11 +21,11 @@
         });
 
         $routeProvider.when('/singup', {
-            templateUrl: 'app/views/singupView.html'
+            templateUrl: 'app/views/singup.html'
         });
 
         $routeProvider.when('/login', {
-            templateUrl: 'app/views/loginView.html'
+            templateUrl: 'app/views/login.html'
         });
 
          $routeProvider.otherwise({

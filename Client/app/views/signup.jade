@@ -14,7 +14,7 @@
                                 span.glyphicon.glyphicon-user
                                 |   Username
                             input#username.form-control(type="text" placeholder="Enter user name" ng-model="vm.user.userName" name="username" required ng-minlength="6")
-                            div.help-block.has-error(ng-if="signup.username.$invalid")
+                            .help-block.has-error(ng-if="signup.username.$invalid")
                                 div(ng-show="signup.username.$error.required") User name is required.
                                 div(ng-show="signup.username.$error.minlength") User name must be at least 6 characters.
                         .form-group(ng-class="{'has-error': signup.email.$invalid}")
@@ -22,7 +22,7 @@
                                 span.glyphicon.glyphicon-envelope
                                 |   Email
                             input#email.form-control(type="email" placeholder="Enter email" ng-model="vm.user.email" name="email" required)
-                            div.help-block.has-error(ng-if="signup.email.$invalid")
+                            .help-block.has-error(ng-if="signup.email.$invalid")
                                 div(ng-show="signup.email.$error.required") Email address is required.
                                 div(ng-show="signup.email.$error.email") Not a valid email address.
                         .form-group(ng-class="{'has-error': signup.password.$invalid}")
@@ -30,7 +30,7 @@
                                 span.glyphicon.glyphicon-eye-open
                                 |   Password
                             input#password.form-control(type="password" placeholder="Enter password" ng-model="vm.user.password" name="password" required ng-minlength="6")
-                            div.help-block.has-error(ng-if="signup.password.$invalid")
+                            .help-block.has-error(ng-if="signup.password.$invalid")
                                 div(ng-show="signup.password.$error.required") Password is required.
                                 div(ng-show="signup.password.$error.minlength") Password must be at least 6 characters.
                         .form-group(ng-class="{'has-error': signup.confirmation.$invalid}")
@@ -38,7 +38,7 @@
                                 span.glyphicon.glyphicon-eye-open
                                 |   Confirmation
                             input#confirmation.form-control(type="password" placeholder="Re-enter password" ng-model="vm.confirmation" name="confirmation" required compare-to="vm.user.password")
-                            div.help-block.has-error(ng-if="signup.confirmation.$invalid")
+                            .help-block.has-error(ng-if="signup.confirmation.$invalid")
                                 div(ng-show="signup.confirmation.$error.required") Confirmation password is required.
                                 div(ng-show="signup.confirmation.$error.compareTo") Password must match.
                         button.btn.btn-block(type="submit" ng-click="vm.register(vm.user)" data-dismiss="modal" ng-disabled="signup.$invalid")
