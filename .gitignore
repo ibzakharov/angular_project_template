@@ -4,6 +4,7 @@ bower_components/
 node_modules/
 obj/
 *.js
+!/Gulp/**/*.js
 *.js.map
 *.ts.orig
 *.csproj.user
