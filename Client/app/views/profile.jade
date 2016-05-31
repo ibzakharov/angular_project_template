@@ -10,3 +10,8 @@
       input#lastname.form-control(type="text" placeholder="Enter last name" ng-model="vm.user.userName" name="lastname" required)
       div.help-block.has-error(ng-if="form.lastname.$invalid")
         div(ng-show="form.lastname.$error.required") Last name is required.
+    .form-group(ng-class="{'has-error': form.birthday.$invalid}")
+      label First Name
+      input#birthday.form-control(type="text" placeholder="Enter birthday" ng-model="vm.user.userName" name="birthday" required)
+      div.help-block.has-error(ng-if="form.birthday.$invalid")
+        div(ng-show="form.birthday.$error.required") Last name is required.
