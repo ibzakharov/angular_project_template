@@ -1,7 +1,12 @@
 ﻿div  
-  form(data-toggle="validator" role="form" name="profile")
-    .form-group(ng-class="{'has-error': login.username.$invalid}")
+  form(data-toggle="validator" role="form" name="form")
+    .form-group(ng-class="{'has-error': form.firstname.$invalid}")
       label First Name
       input#firstname.form-control(type="text" placeholder="Enter first name" ng-model="vm.user.userName" name="firstname" required)
-      div.help-block.has-error(ng-if="login.firstname.$invalid")
-        div(ng-show="profile.firstname.$error.required") First name is required.
+      div.help-block.has-error(ng-if="form.firstname.$invalid")
+        div(ng-show="form.firstname.$error.required") First name is required.
+    .form-group(ng-class="{'has-error': form.lastname.$invalid}")
+      label First Name
+      input#lastname.form-control(type="text" placeholder="Enter last name" ng-model="vm.user.userName" name="lastname" required)
+      div.help-block.has-error(ng-if="form.lastname.$invalid")
+        div(ng-show="form.lastname.$error.required") Last name is required.
