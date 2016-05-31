@@ -32,7 +32,7 @@
     <Content Include="app\views\homeView.jade" />
     <Content Include="app\views\login.jade" />
     <Content Include="app\views\mainView.jade" />
-    <Content Include="app\views\profileView.jade" />
+    <Content Include="app\views\profile.jade" />
     <Content Include="index.jade" />
     <TypeScriptCompile Include="app\js\configurations\toastrConfig.ts" />
     <TypeScriptCompile Include="app\js\controllers\signupController.ts" />
