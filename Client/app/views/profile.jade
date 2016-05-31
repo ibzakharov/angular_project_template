@@ -1,0 +1,7 @@
+﻿div  
+  form(data-toggle="validator" role="form" name="profile")
+    .form-group(ng-class="{'has-error': login.username.$invalid}")
+      label First Name
+      input#firstname.form-control(type="text" placeholder="Enter first name" ng-model="vm.user.userName" name="firstname" required)
+      div.help-block.has-error(ng-if="login.firstname.$invalid")
+        div(ng-show="profile.firstname.$error.required") First name is required.
